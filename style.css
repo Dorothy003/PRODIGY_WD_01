@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #050114;
+    font-family: sans-serif;
+}
+
+
+nav {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #010600;
+    position: relative;
+    height: 70px;
+}
+
+.Hackavita {
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    position:relative;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    position:relative;
+    margin-left:30px;
+    transition:0.3s ease;
+}
+nav ul li a:before{
+    content:"";
+    position:absolute;
+    background:linear-gradient(rgb(95, 230, 248),rgb(125, 255, 73));
+    width:0;
+    height:3px;
+    bottom:-10px;
+    left:0;
+    transition:0.3s ease;
+}
+nav ul li a:hover:before{
+    width:100%;
+}
+nav ul li a:hover{
+    color:rgba(35, 241, 156, 0.973);
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon i {
+    color: #fff;
+    font-size: 30px;
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #000000;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li {
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon {
+        display: block;
+
+    }
+    #menuList {
+        transition: all 0.5s;
+    }
+}
+
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(0, 0, 19);
+    z-index: 1;
+}
+
+.home .content {
+    z-index: 888;
+    color: white;
+    width: 80%;
+    margin-top: 50px;
+    left:100px;
+}
+
+.home .content h1 {
+    font-size: 6rem;
+    font-weight: 1000;
+    font-family: var(--font-barlow);
+    letter-spacing: 1px;
+    line-height: 100px;
+    margin-bottom: 40px;
+}
+
+.home .content h1 span {
+    background: linear-gradient(to right, rgb(97, 188, 218), rgb(76, 222, 76));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.home .content p {
+    margin-bottom: 65px;
+}
+
+.home .content a {
+    background: black;
+    padding: 10px 100px;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 4rem;
+    border: white;
+    border-style: outset;
+}
+
+
+.home .img1 img {
+    position: absolute;
+    left: 942px;
+    width: 560px;
+    height:560px;
+    object-fit: cover;
+}
+
+.home .img2 img {
+    position: absolute;
+    top: 2px;
+    left: -788px;
+    width: 1412px;
+    height: 1000px;
+    object-fit: contain;
+    opacity: 0.23;
+}
